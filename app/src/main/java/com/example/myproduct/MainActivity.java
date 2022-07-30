@@ -8,9 +8,13 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     private String TAG = MainActivity.class.getSimpleName();
@@ -20,13 +24,17 @@ public class MainActivity extends AppCompatActivity {
 
     private final BerandaFragment berandaFragment = new BerandaFragment();
     private final ProdukFragment produkFragment = new ProdukFragment();
+    private final UserFragment userFragment = new UserFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         initView();
+
         loadFragment(berandaFragment);
+
         nav.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -35,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.action_beranda : loadFragment(berandaFragment);
                                 return true;
                             case R.id.action_produk : loadFragment(produkFragment);
+                                return true;
+                            case R.id.action_profile : loadFragment(userFragment);
                                 return true;
                         }
                         return false;

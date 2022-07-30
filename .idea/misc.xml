@@ -3,16 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/drawable/progress.xml" value="0.1465" />
+        <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/drawable/splash_logo.xml" value="0.1465" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/activity_item.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/activity_login.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/activity_register.xml" value="0.1573321932449765" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/activity_splashscreen.xml" value="0.19166666666666668" />
+        <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/activity_user.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/fragment_beranda.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/fragment_dashboard.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/fragment_produk.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/fragment_profile.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/item.xml" value="0.2" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/item_activity.xml" value="0.16799999999999998" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/layout/splashscreen_activity.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/menu/item_menu.xml" value="0.20521590423257802" />
+        <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/menu/main_menu.xml" value="0.20521590423257802" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/menu/menu_activity.xml" value="0.19114583333333332" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1465" />
         <entry key="..\:/Users/Azis Nurjaman/AndroidStudioProjects/MyProduct/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1465" />
