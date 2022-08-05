@@ -7,51 +7,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
+        android:gravity="center"
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/NamaProduk"
+            android:id="@+id/NamaPelanggan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nama Produk"
+            android:hint="Nama Pelanggan"
             android:textSize="15dp" />
 
         <RadioGroup
-            android:id="@+id/jenisProduk"
-            android:layout_width="wrap_content"
+            android:id="@+id/JenisKelamin"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/NamaProduk"
             android:orientation="horizontal">
-
             <RadioButton
-                android:id="@+id/Baju"
+                android:id="@+id/Laki"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Baju" />
+                android:text="Laki-laki" />
 
             <RadioButton
-                android:id="@+id/Celana"
+                android:id="@+id/Perempuan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Celana" />
-
+                android:text="Perempuan" />
         </RadioGroup>
-
-        <EditText
-            android:id="@+id/Harga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Harga Produk"
-            android:inputType="number"
-            android:textSize="15dp" />
-
-        <EditText
-            android:id="@+id/Stok"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Stok Produk"
-            android:textSize="15dp"
-            android:inputType="number" />
 
         <Button
             android:id="@+id/Submit"

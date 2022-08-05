@@ -73,6 +73,7 @@ public class UserFragment extends Fragment {
             startActivity(new Intent(getActivity(), Login.class));
             Toast.makeText(getActivity(), "Logout successfully!",
                     Toast.LENGTH_LONG).show();
+            System.exit(0);
         });
     }
 }

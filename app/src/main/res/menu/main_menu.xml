@@ -5,11 +5,15 @@
         android:title="Beranda"
         android:icon="@drawable/ic_baseline_home_24"/>
     <item
+        android:id="@+id/action_pelanggan"
+        android:title="Beranda"
+        android:icon="@drawable/ic_baseline_person_24"/>
+    <item
         android:id="@+id/action_produk"
         android:title="Produk"
         android:icon="@drawable/ic_baseline_assignment_24"/>
     <item
         android:id="@+id/action_profile"
-        android:title="Profile"
-        android:icon="@drawable/ic_baseline_person_24"/>
+        android:title="Setting"
+        android:icon="@drawable/ic_baseline_settings_24"/>
 </menu>

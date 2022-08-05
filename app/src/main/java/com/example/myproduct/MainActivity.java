@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView nav;
 
     private final BerandaFragment berandaFragment = new BerandaFragment();
+    private final PelangganFragment pelangganFragment = new PelangganFragment();
     private final ProdukFragment produkFragment = new ProdukFragment();
     private final UserFragment userFragment = new UserFragment();
 
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()){
                             case R.id.action_beranda : loadFragment(berandaFragment);
+                                return true;
+                            case R.id.action_pelanggan: loadFragment(pelangganFragment);
                                 return true;
                             case R.id.action_produk : loadFragment(produkFragment);
                                 return true;

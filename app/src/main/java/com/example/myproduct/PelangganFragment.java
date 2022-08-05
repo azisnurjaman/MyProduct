@@ -1,8 +1,8 @@
 package com.example.myproduct;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.FocusFinder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +11,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,41 +22,41 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ProdukFragment extends Fragment implements ItemAdapter.ItemListener{
-    private String TAG = ProdukFragment.class.getSimpleName();
-    private FloatingActionButton add;
-    private RecyclerView viewItem;
-    private ArrayList<Item> listItem;
+public class PelangganFragment extends Fragment implements PelangganAdapter.PelangganListener{
+    private String TAG = PelangganFragment.class.getSimpleName();
+    private FloatingActionButton add2;
+    private RecyclerView viewPelanggan;
+    private ArrayList<Pelanggan> listPelanggan;
     private RecyclerView.LayoutManager layoutManager;
     private RecyclerView.Adapter adapter;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_produk, container, false);
+        View v = inflater.inflate(R.layout.fragment_pelanggan, container, false);
         initView(v);
         layoutManager = new LinearLayoutManager(getActivity());
-        viewItem.setLayoutManager(layoutManager);
+        viewPelanggan.setLayoutManager(layoutManager);
 
-        add.setOnClickListener(new View.OnClickListener() {
+        add2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), ItemActivity.class);
+                Intent intent = new Intent(getActivity(), PelangganActivity.class);
                 startActivity(intent);
             }
         });
 
-        FirebaseUtils.getRefrence(FirebaseUtils.ITEMS_PATH).addValueEventListener(new ValueEventListener() {
+        FirebaseUtils2.getRefrence(FirebaseUtils2.ITEMS_PATH).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                listItem = new ArrayList<>();
+                listPelanggan = new ArrayList<>();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    Item item = snapshot.getValue(Item.class);
-                    item.setKey(snapshot.getKey());
-                    listItem.add(item);
+                    Pelanggan pelanggan = snapshot.getValue(Pelanggan.class);
+                    pelanggan.setKey2(snapshot.getKey());
+                    listPelanggan.add(pelanggan);
                 }
-                adapter = new ItemAdapter(listItem, getActivity(), ProdukFragment.this);
-                viewItem.setAdapter(adapter);
+                adapter = new PelangganAdapter(listPelanggan, getActivity(), PelangganFragment.this);
+                viewPelanggan.setAdapter(adapter);
             }
 
             @Override
@@ -68,19 +67,19 @@ public class ProdukFragment extends Fragment implements ItemAdapter.ItemListener
         return v;
     }
 
-    private void initView(View v){
-        viewItem = v.findViewById(R.id.ViewItem);
-        add = v.findViewById(R.id.Add);
+    private void initView(View v) {
+        viewPelanggan = v.findViewById(R.id.ViewPelanggan);
+        add2 = v.findViewById(R.id.Add2);
     }
 
     @Override
-    public void delete(Item item, int position) {
-        FirebaseUtils.getRefrence(FirebaseUtils.ITEMS_PATH).child(item.getKey()).removeValue()
+    public void delete(Pelanggan pelanggan, int position) {
+        FirebaseUtils2.getRefrence(FirebaseUtils2.ITEMS_PATH).child(pelanggan.getKey2()).removeValue()
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void unused) {
-                Toast.makeText(getActivity(), "Produk Berhasil Dihapus.", Toast.LENGTH_LONG).show();
-            }
-        });
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(getActivity(), "Pelanggan Berhasil Dihapus.", Toast.LENGTH_LONG).show();
+                    }
+                });
     }
 }
