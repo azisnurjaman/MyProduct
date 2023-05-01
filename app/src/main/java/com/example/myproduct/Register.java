@@ -77,6 +77,11 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             pass.requestFocus();
             return;
         }
+        if (txt_pass.length() <= 5){
+            pass.setError("Min password length should be more then 5 characters!");
+            pass.requestFocus();
+            return;
+        }
 
         progress.setVisibility(View.VISIBLE);
         Auth.createUserWithEmailAndPassword(txt_email, txt_pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
